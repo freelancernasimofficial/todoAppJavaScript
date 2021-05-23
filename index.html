@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style type="text/css">
+
+            .container {
+    width: 1140px;
+    margin: auto;
+    padding: 30px;
+    font-family: arial;
+}
+
+h1#titleBar {
+    font-family: arial black;
+    color: #333;
+    font-size: 30px;
+}
+
+table thead tr th {
+    padding: 15px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table tbody tr td {
+    padding: 15px;
+}
+
+table  td button {
+    border: none;
+    padding: 10px 20px;
+}
+
+table  td button.btn-edit {
+    background: #673ab7;
+    color: white;
+}
+
+table tbody tr td button.btn-dlt {
+    color: white;
+    background: red;
+}
+    table td input {
+    padding: 15px;
+    border: none;
+    text-align: left;
+}
+
+table td button {
+  cursor:pointer;
+}
+span#emptyMsg {
+    font-size: 20px;
+    color: #777;
+    display: block;
+    margin-bottom: 30px;
+}
+    tbody#tableBody tr:last-child td {
+    width: 100px;
+}
+div#editForm input,textarea {
+    margin-top: 25px;
+    font-size: 18px;
+    padding: 10px;
+}
+#editForm{display: none;}
+
+div#editForm button {
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor:pointer;
+    
+}
+
+button#cancel {
+    background: red;
+    color: white;
+}
+
+button#update {
+    color: white;
+    background: #2196f3;
+}
+    </style>
+    <title>Todo</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="titleBar">TODO APP</h1>
+      <span id="emptyMsg"></span>
+      <table id="todoTableWrapper" border="1px">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+            <tfoot>
+              <tr>
+                <td><input type="text" id="title" placeholder="Todo Title"/></td>
+                <td colspan="2"><input type="text" id="desc" placeholder="Todo Desc"/></td>
+                <td> <center><button id="addBtn" class="btn btn-edit">Add</button></center></td>
+              </tr>
+            </tfoot>
+        <tbody id="tableBody">
+
+
+          
+
+
+        </tbody>
+
+
+      </table>
+
+
+    <div id="editForm">
+    
+          <div>
+          
+          <input type="text" value="" id="Edittitle"/>
+          <input type="hidden" value="" id="arrayIndex"/>
+          <button id="cancel">CANCEL</button>
+          <button id="update">UPDATE</button>
+          </div>
+          <div><textarea id="Editdesc" cols="50" rows="5"></textarea></div>
+    
+    </div>
+
+
+    </div>
+
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
